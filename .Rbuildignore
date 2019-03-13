@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 ^LICENSE\.md$
-=======
 ^README\.Rmd$
->>>>>>> e0346d3f8216bcff8c44f0d8c91b53ecf08b1c84
 ^.*\.Rproj$
 ^\.Rproj\.user$
