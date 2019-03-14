@@ -21,6 +21,7 @@ Imports:
     sf,
     purrr,
     ggplot2,
-    readr
+    readr,
+    magrittr
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 6.1.1

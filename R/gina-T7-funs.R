@@ -12,23 +12,30 @@ FunLongLat <- function(mydf){
   return(newdf)
 }
 
+FunDoIt <- function(myfile, mytoler){
 
-## Here our depth is 3, but that could change depending on the file
-ozplus <- oz$geometry %>%
-  modify_depth(3,data.frame) %>%
-  modify_depth(3,f) %>%
-  flatten() %>%
-  flatten() %>%
-  bind_rows(.id = "group")
-# ozplus %>%
-#   ggplot(aes(x = long, y = lat, group = group)) +
-#   geom_polygon(fill = "white", colour = "black", lwd = 1)+
-#   theme_bw()+
-#   coord_quickmap()
+  ozplus <- myfile$geometry
 
 
 
-oz_st <- maptools::thinnedSpatialPoly(
-  as(ozbig, "Spatial"), tolerance = 0.1,
-  minarea = 0.001, topologyPreserve = TRUE)
-oz <- st_as_sf(oz_st)
+
+}
+# ## Here our depth is 3, but that could change depending on the file
+# ozplus <- oz$geometry %>%
+#   modify_depth(3,data.frame) %>%
+#   modify_depth(3,f) %>%
+#   flatten() %>%
+#   flatten() %>%
+#   bind_rows(.id = "group")
+# # ozplus %>%
+# #   ggplot(aes(x = long, y = lat, group = group)) +
+# #   geom_polygon(fill = "white", colour = "black", lwd = 1)+
+# #   theme_bw()+
+# #   coord_quickmap()
+#
+#
+#
+# oz_st <- maptools::thinnedSpatialPoly(
+#   as(ozbig, "Spatial"), tolerance = 0.1,
+#   minarea = 0.001, topologyPreserve = TRUE)
+# oz <- st_as_sf(oz_st)
