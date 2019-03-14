@@ -1,20 +1,39 @@
-# ggshp
 
-The goal of ggshp is to ...
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+ggshp
+=====
 
-## Installation
+The goal of ggshp is to take a shp file and transform it into something that can easily be used in ggplot2.
 
-You can install the released version of ggshp from [CRAN](https://CRAN.R-project.org) with:
+Installation
+------------
+
+You can install the ghetto version of ggshp from [github](https://github.com/ashirazist/ggshp) with:
 
 ``` r
-install.packages("ggshp")
+githubinstall("ggshp")
 ```
 
-## Example
+Example
+-------
 
 This is a basic example which shows you how to solve a common problem:
 
+Yuck. A shp file. Use one of our three functions.
+
 ``` r
-## basic example code
+dtib <- FunTeam7(dhsp)
+
+dtib %>% 
+   ggplot(aes(x = long, y = lat, group = group)) + 
+   geom_polygon(fill = "white", colour = "black", lwd = 1)+
+   theme_bw()+
+   coord_quickmap()
 ```
 
+Team Members
+------------
+
+-   Virginia (Gina) Nichols
+-   Amin Shirazi
+-   Qing He
