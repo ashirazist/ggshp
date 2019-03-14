@@ -14,14 +14,14 @@ knitr::opts_chunk$set(
 ```
 # ggshp
 
-The goal of ggshp is to ...
+The goal of ggshp is to take a shp file and transform it into something that can easily be used in ggplot2. 
 
 ## Installation
 
-You can install the released version of ggshp from [CRAN](https://CRAN.R-project.org) with:
+You can install the ghetto version of ggshp from [github](https://github.com/ashirazist/ggshp) with:
 
 ``` r
-install.packages("ggshp")
+githubinstall("ggshp")
 ```
 
 ## Example

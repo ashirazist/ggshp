@@ -22,6 +22,8 @@ Imports:
     purrr,
     ggplot2,
     readr,
-    magrittr
+    magrittr,
+    maptools,
+    rgeos
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 6.1.1
