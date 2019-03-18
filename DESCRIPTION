@@ -1,29 +1,14 @@
 Package: ggshp
-Type: Package
-Title: Takes a shp file and makes it ggplot2 friendly
-Version: 0.1.0
-Authors@R: c(
-    person("Amin", "Shirazi", , "ashirazi@iastate.edu", role = c("aut", "cre")
-    ),
-    person("Virginia", "Nichols", , "vnichols@iastate.edu", role = "aut"
-    ),
-    person("Qing", "He", , "qinghe@iastate.edu", role = "aut"
-    ))
-Description: Lab #3 from ISU's Stat585 class. It will do something. 
-    Use four spaces when indenting paragraphs within the Description.
-License: MIT + file LICENSE
+Title: What the Package Does (One Line, Title Case)
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "First",
+           family = "Last",
+           role = c("aut", "cre"),
+           email = "first.last@example.com")
+Description: What the package does (one paragraph).
+License: What license it uses
 Encoding: UTF-8
 LazyData: true
-URL: https://github.com/ashirazist/ggshp
-BugReports: https://github.com/ashirazist/ggshp/issues
-Imports: 
-    dplyr,
-    sf,
-    purrr,
-    ggplot2,
-    readr,
-    magrittr,
-    maptools,
-    rgeos
-Roxygen: list(markdown = TRUE)
-RoxygenNote: 6.1.1
+Suggests: 
+    testthat

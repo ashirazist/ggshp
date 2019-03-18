@@ -1,4 +1,5 @@
+^ggshp\.Rproj$
+^\.Rproj\.user$
 ^LICENSE\.md$
 ^README\.Rmd$
 ^.*\.Rproj$
-^\.Rproj\.user$
