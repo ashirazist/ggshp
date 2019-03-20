@@ -1,6 +1,6 @@
 ##' @name team_11
 ##' @title Convert Shape File to Data Frame
-##' @description This function extracts data from a shapefile. Reads in the shapefile and extracts data from nested lists, finally recording them into one data frame with columns: long, lat, group and, order.
+##' @description This function extracts data from a shapefile. Reads in the shapefile and extracts data from nested lists, finally recording them into one data frame with columns: long, lat, group, area, sub and additional information containded by the original shape file.
 ##' @author Qing He
 ##' @usage team_11(path=getwd(), tol=0.1)
 ##' @param path file path to a shape file
