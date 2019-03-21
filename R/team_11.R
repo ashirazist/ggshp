@@ -12,7 +12,7 @@
 
 
 #documentation
-team_11 <- function(path=getwd(), tol= 0.1) {
+team_11 <- function(path=file.choose(), tol= 0.1) {
   #read shp file from path, thin, convert to st file.
   #errors will be reported if the file is format is wrong, or the path is wrong by "read_sf" function.
   if (file_ext(path) == "shp")
