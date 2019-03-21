@@ -1,12 +1,13 @@
 ##' @name team_11
 ##' @title Convert Shape File to Data Frame
-##' @description This function extracts data from a shapefile. Reads in the shapefile and extracts data from nested lists, finally recording them into one data frame with columns: long, lat, group and, order.
+##' @description This function extracts data from a shapefile. Reads in the shapefile and extracts data from nested lists, finally recording them into one data frame with columns: long, lat, group, area, sub and additional information containded by the original shape file.
 ##' @author Qing He
 ##' @usage team_11(path=getwd(), tol=0.1)
 ##' @param path file path to a shape file
 ##' @param tol tolerance value used for thinning the polygon
 ##' @return A data frame of the geographic information of the polygons.
 ##' @examples  nc<- team_11(system.file("shape/nc.shp", package="sf"),0.1)
+##' @import  tools sf dplyr purrr maptools testthat
 ##' @export
 
 
@@ -36,12 +37,12 @@ team_11 <- function(path=getwd(), tol= 0.1) {
         df <-
           map_depth(.x = geost$geometry, (nlevel - 1), .f = as.data.frame) %>% #change buttom layer into data frame
           modify_depth(-(nlevel), flatten) %>% #flatten from bottom to top
-          modify_depth(-(nlevel - 1), bind_rows, .id = "order2") %>% #bind list into df within each group
-          bind_rows(.id = "order1") %>% #bind list into df for all groups
+          modify_depth(-(nlevel - 1), bind_rows, .id = "order2") %>% #bind list into df within each areas
+          bind_rows(.id = "order1") %>% #bind list into df for all areas
           group_by(order1, order2) %>%
           mutate(group = paste(order1, order2, sep = "_")) %>%
           data.frame()
-        unique(df$group)
+
         colnames(df) <- c("area", "sub", "long", "lat", "group")
         print("Attaching additional information")
         #attach additional information as cols to the geo coord
