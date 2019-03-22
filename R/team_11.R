@@ -7,7 +7,7 @@
 ##' @param tol tolerance value used for thinning the polygon
 ##' @return A data frame of the geographic information of the polygons.
 ##' @examples  nc<- team_11(system.file("shape/nc.shp", package="sf"),0.1)
-##' @import  tools sf dplyr purrr maptools testthat
+##' @import  tools sf dplyr purrr maptools
 ##' @export
 
 
