@@ -2,10 +2,14 @@
 
 export("%>%")
 export(team_11)
+<<<<<<< HEAD
 export(team_7)
 export(team_7fun)
 export(team_one)
 import(checkmate)
+=======
+export(team_one)
+>>>>>>> 206716f44b4ced6b7061f0b1fe9770c12fbca228
 import(dplyr)
 import(ggplot2)
 import(maptools)
