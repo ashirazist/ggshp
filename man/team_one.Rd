@@ -4,7 +4,7 @@
 \alias{team_one}
 \title{Converting sf file into a dataframe/ tibble}
 \usage{
-team_1(.file, tolerance=0.1)
+team_one(.file, tolerance=0.1)
 }
 \arguments{
 \item{tolerance}{tolerance value used for thinning the polygon}
