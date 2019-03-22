@@ -22,7 +22,9 @@ This is a basic example which shows you how to solve a common problem:
 Yuck. A shp file. Use one of our three functions.
 
 ``` r
-dtib <- FunTeam7(dhsp)
+
+# NOTE: dhsp is the path to the shp file
+dtib <- team_7(dhsp)
 
 dtib %>% 
    ggplot(aes(x = long, y = lat, group = group)) + 
