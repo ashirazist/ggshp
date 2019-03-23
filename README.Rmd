@@ -20,12 +20,13 @@ The goal of ggshp is to take a shp file and transform it into something that can
 ## Installation
 
 
-You can install the ghetto version of ggshp from [github](https://github.com/ashirazist/ggshp) with:
+You can install the not-quite functioning version of ggshp from [github](https://github.com/ashirazist/ggshp) with:
 
 ``` r
 githubinstall("ggshp")
 ```
 
+Our team struggled to address package building and testing errors because (i) the functions we chose to build weren't necessarily robust to other shp file intputs and (ii) we didn't get the same errors on our individual machines, making it difficult to trouble shoot. We also originally tried to build more robust testing, but those quickly became unmanageable to address with all of the other problems we ran across. Package building can be a real time suck. 
 
 ## Example
 
