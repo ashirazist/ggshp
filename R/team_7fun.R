@@ -3,18 +3,12 @@
 #' @param mypath path to file you want to read
 #' @param mytoler numeric, desired tolerance to thin, default is 0.1
 #' @return A tibble for ggplot2
-#' @import tools dplyr purrr maptools testthat checkmate sf
+#' @import tools dplyr purrr maptools testthat checkmate sf ggplot2
 #' @export
 #' @examples
 #' # Take in sf data, use team_7 function, plot output using ggplot2
-#' exdat <- sf::read_sf(system.file("shape/nc.shp", package = "sf"))
-#' datatib <- team_7(myfile = exdat, mytoler = 0.2)
-#' datatib %>%
-#'   ggplot(aes(x = long, y = lat, group = group)) +
-#'   geom_polygon(fill = "white", colour = "black", lwd = 1)+
-#'   theme_bw()+
-#'   coord_quickmap()
-#'
+#' datatib <- team_7fun(mypath = system.file("shape/nc.shp", package = "sf"), mytoler = 0.2)
+
 
 
 team_7fun <- function(mypath, mytoler = 0.1) {
@@ -36,7 +30,7 @@ team_7fun <- function(mypath, mytoler = 0.1) {
         topologyPreserve = TRUE
       )
 
-      oz <- sf::st_as_sf(oz)
+      oz <- sf::st_as_sf(oz0)
 
         # Function________________
         FunLongLat <- function(dframe) {

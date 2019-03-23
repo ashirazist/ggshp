@@ -19,12 +19,5 @@ Thin shp file and gg-ify it
 }
 \examples{
 # Take in sf data, use team_7 function, plot output using ggplot2
-exdat <- sf::read_sf(system.file("shape/nc.shp", package = "sf"))
-datatib <- team_7(myfile = exdat, mytoler = 0.2)
-datatib \%>\%
-  ggplot(aes(x = long, y = lat, group = group)) +
-  geom_polygon(fill = "white", colour = "black", lwd = 1)+
-  theme_bw()+
-  coord_quickmap()
-
+datatib <- team_7fun(mypath = system.file("shape/nc.shp", package = "sf"), mytoler = 0.2)
 }
